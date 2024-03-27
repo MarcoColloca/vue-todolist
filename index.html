@@ -57,7 +57,7 @@
                                 <span 
                                  class="flex-grow" 
                                  v-if="object.done === false"  
-                                 @click="object.done === true ? object.done = false : object.done = true"
+                                 @click="checkTask(i)"
                                 >
                                     {{object.text}}
                                 </span>
@@ -67,7 +67,7 @@
                                  class="flex-grow" 
                                  v-else 
                                  :class="classLineThrough" 
-                                 @click="object.done === true ? object.done = false : object.done = true"
+                                 @click="checkTask(i)"
                                 >
                                     {{object.text}}
                                 </span>
@@ -75,7 +75,7 @@
                                 <!-- Elemento che serve a rimuovere una Task -->
                                 <span 
                                  class="todo-list-main__card--body__list__item--delete"
-                                 @click="removeTask(todoList, i, 1)"
+                                 @click="removeTask(i, 1)"
                                 >
                                     X
                                 </span>

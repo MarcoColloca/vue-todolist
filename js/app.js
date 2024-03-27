@@ -37,8 +37,14 @@ createApp({
 
 
     methods:{
-        removeTask(array, index, elementsRemoved){
-            array.splice(index, elementsRemoved)
+
+        checkTask(index){
+
+            this.todoList[index].done = !this.todoList[index].done;
+        },
+
+        removeTask(index, elementsRemoved){
+            this.todoList.splice(index, elementsRemoved)
     
         },
         
@@ -51,17 +57,6 @@ createApp({
 
             this.todoList.push(newTask)
             this.taskValue = ''
-            /*
-            if(this.taskValue !== ''){
-
-                this.todoList.push({
-                    text: this.taskValue,
-                    done: false,
-                })
-    
-                this.taskValue = ''
-            }
-            */
         },
         
     }
