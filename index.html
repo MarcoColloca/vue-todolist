@@ -31,12 +31,13 @@
                             <li 
                             class="todo-list-main__card--body__list__item" 
                             v-for="(object,i) in todoList"
+                            @click="object.done === true ? object.done = false : object.done = true"
                             >
                                 <span v-if="object.done === false">
                                     {{object.text}}
                                 </span>
                                
-                                <span v-else :class="ClassLineThrough">
+                                <span v-else :class="classLineThrough">
                                     {{object.text}}
                                 </span>
                             </li>

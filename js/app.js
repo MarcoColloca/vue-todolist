@@ -29,23 +29,25 @@ createApp({
                     done: false,
                 },
             ],
-            CurrentObjectIndex: 0,
-            ClassLineThrough: 'decoration-line-through',
+            classLineThrough: 'decoration-line-through',
         }
     },
 
 
 
     methods:{
-        todoCheck(){
+        todoCheck(element){
             
+            for(let i = 0; i < this.todoList.length; i++){
+                
+            }
 
-            for(let i = object; i < this.todoList.length; i++){
-                if(this.todoList[i].done === true){
-                    
-                }
-
-            }            
+            if(element.done === false){
+                element.done === true
+            } else if(element.done === true){
+                element.done === false
+            }
+            console.log('Aaa')
         }
 
     }
