@@ -13,7 +13,7 @@ createApp({
                     done: false,
                 },
                 {
-                    text: 'Respirare',
+                    text: 'Inspirare',
                     done: false,
                 },
                 {
@@ -21,7 +21,7 @@ createApp({
                     done: false,
                 },
                 {
-                    text: 'Respirare',
+                    text: 'Espirare',
                     done: false,
                 },
                 {

@@ -28,11 +28,9 @@
                 <div class="todo-list-main__card">
                     <div class="todo-list-main__card--body">
                         <ul class="todo-list-main__card--body__list">
-                            <li class="todo-list-main__card--body__list__item">Cose da Fare</li>
-                            <li class="todo-list-main__card--body__list__item">Cose da Fare</li>
-                            <li class="todo-list-main__card--body__list__item">Cose da Fare</li>
-                            <li class="todo-list-main__card--body__list__item">Cose da Fare</li>
-                            <li class="todo-list-main__card--body__list__item">Cose da Fare</li>
+                            <li class="todo-list-main__card--body__list__item" v-for="(object,i) in todoList">
+                                {{object.text}}
+                            </li>
                         </ul>
                     </div>                    
                 </div>
