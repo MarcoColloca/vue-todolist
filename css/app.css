@@ -70,6 +70,10 @@ input:focus-visible{
 }
 
 
+
+
+
+
 /*Card Head*/
 
 .todo-list-main__card--head{
@@ -77,6 +81,7 @@ input:focus-visible{
     padding: 12px 24px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    text-align: center;
 }
 
 .todo-list-main__card--head__text-box{
@@ -89,6 +94,26 @@ input:focus-visible{
     background-color: rgba(255, 255, 255, 0.37);
     color: rgb(0, 0, 0);
 }
+
+
+
+.todo-list-main__card--head__button{
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 18px;
+    background-color: #0E0E0E;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
 
 /* Card Body*/
 .todo-list-main__card--body{
