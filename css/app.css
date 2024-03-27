@@ -17,6 +17,10 @@ ul, li, menu{
     text-decoration: line-through;
 }
 
+.flex-grow{
+    flex-grow: 1;
+}
+
 
 /* Page Style*/
 
@@ -68,9 +72,22 @@ body{
     line-height: 30px;
     font-size: 24px;
     border-top: 1px solid rgb(200, 200, 200);
-    padding: 0 5px;
+    padding-left: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
 .todo-list-main__card--body__list .todo-list-main__card--body__list__item:last-child{
     border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.todo-list-main__card--body__list__item:hover{
+    background-color: #2D2735;
+    color: white;
+}
+
+
+.todo-list-main__card--body__list__item--delete{
+    padding: 0 10px;
 }

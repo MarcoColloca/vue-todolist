@@ -31,14 +31,24 @@
                             <li 
                             class="todo-list-main__card--body__list__item" 
                             v-for="(object,i) in todoList"
-                            @click="object.done === true ? object.done = false : object.done = true"
                             >
-                                <span v-if="object.done === false">
+                                <span class="flex-grow" v-if="object.done === false"  
+                                @click="object.done === true ? object.done = false : object.done = true"
+                                >
                                     {{object.text}}
                                 </span>
                                
-                                <span v-else :class="classLineThrough">
+                                <span class="flex-grow" v-else 
+                                :class="classLineThrough" 
+                                @click="object.done === true ? object.done = false : object.done = true"
+                                >
                                     {{object.text}}
+                                </span>
+
+                                <span class="todo-list-main__card--body__list__item--delete"
+                                @click="removeTodo(todoList, i, 1)"
+                                >
+                                    X
                                 </span>
                             </li>
                         </ul>

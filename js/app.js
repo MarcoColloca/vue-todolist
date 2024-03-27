@@ -36,19 +36,10 @@ createApp({
 
 
     methods:{
-        todoCheck(element){
-            
-            for(let i = 0; i < this.todoList.length; i++){
-                
-            }
-
-            if(element.done === false){
-                element.done === true
-            } else if(element.done === true){
-                element.done === false
-            }
-            console.log('Aaa')
+        removeTodo(array, index, elementsRemoved){
+            array.splice(index, elementsRemoved)
+    
         }
-
+    
     }
 }).mount('#app')
