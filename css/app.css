@@ -21,6 +21,9 @@ ul, li, menu{
     flex-grow: 1;
 }
 
+.text-crimson{
+    color: crimson;
+}
 
 /* Page Style*/
 

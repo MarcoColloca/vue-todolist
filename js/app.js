@@ -29,7 +29,7 @@ createApp({
                     done: false,
                 },
             ],
-            classLineThrough: 'decoration-line-through',
+            classLineThrough: 'decoration-line-through text-crimson',
             taskValue: ''
         }
     },
@@ -44,8 +44,14 @@ createApp({
         
         addTask(){
 
-            //this.taskValue.trim()
+            const newTask = {
+                text: this.taskValue,
+                done: false
+            }
 
+            this.todoList.push(newTask)
+            this.taskValue = ''
+            /*
             if(this.taskValue !== ''){
 
                 this.todoList.push({
@@ -55,6 +61,7 @@ createApp({
     
                 this.taskValue = ''
             }
+            */
         },
         
     }
