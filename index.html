@@ -31,8 +31,10 @@
                         <!-- Text box per inserire le Task-->                        
                         <input 
                          class="todo-list-main__card--head__text-box" 
-                         type="text" placeholder="Nuova Task..." 
-                         v-model.trim="taskValue" @keyup.enter="addTask()"
+                         type="text" 
+                         placeholder="Nuova Task..." 
+                         v-model.trim="taskValue" 
+                         @keyup.enter="addTask()"
                         >
 
                         <!-- Bottone per inserire la Task scritta nella Text-Box --> 
