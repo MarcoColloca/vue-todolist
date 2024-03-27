@@ -30,16 +30,32 @@ createApp({
                 },
             ],
             classLineThrough: 'decoration-line-through',
+            taskValue: ''
         }
     },
 
 
 
     methods:{
-        removeTodo(array, index, elementsRemoved){
+        removeTask(array, index, elementsRemoved){
             array.splice(index, elementsRemoved)
     
-        }
+        },
+        
+        addTask(){
+
+            //this.taskValue.trim()
+
+            if(this.taskValue !== ''){
+
+                this.todoList.push({
+                    text: this.taskValue,
+                    done: false,
+                })
     
+                this.taskValue = ''
+            }
+        },
+        
     }
 }).mount('#app')

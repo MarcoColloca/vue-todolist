@@ -28,8 +28,8 @@
                 <div class="todo-list-main__card">
                     <!-- Card Head -->
                     <div class="todo-list-main__card--head">
-                        <input class="todo-list-main__card--head__text-box" type="text" placeholder="Nuova Task...">
-                        <button class="todo-list-main__card--head__button">Aggiungi Task</button>
+                        <input class="todo-list-main__card--head__text-box" type="text" placeholder="Nuova Task..." v-model.trim="taskValue">
+                        <button class="todo-list-main__card--head__button" @click="addTask">Aggiungi Task</button>
                     </div>
                     <!-- Card Body -->
                     <div class="todo-list-main__card--body">
@@ -56,7 +56,7 @@
 
                                 <!-- Elemento che serve a rimuovere una Task -->
                                 <span class="todo-list-main__card--body__list__item--delete"
-                                @click="removeTodo(todoList, i, 1)"
+                                @click="removeTask(todoList, i, 1)"
                                 >
                                     X
                                 </span>
