@@ -38,6 +38,9 @@ body{
 
 .todo-list-header__title{
     text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    color: rgb(38, 0, 128);
 }
 
 
