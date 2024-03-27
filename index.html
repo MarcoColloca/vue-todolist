@@ -28,35 +28,52 @@
                 <div class="todo-list-main__card">
                     <!-- Card Head -->
                     <div class="todo-list-main__card--head">
-                        <input class="todo-list-main__card--head__text-box" type="text" placeholder="Nuova Task..." v-model.trim="taskValue" @keyup.enter="addTask()">
-                        <button class="todo-list-main__card--head__button" @click="addTask()">Aggiungi Task</button>
+                        <!-- Text box per inserire le Task-->                        
+                        <input 
+                         class="todo-list-main__card--head__text-box" 
+                         type="text" placeholder="Nuova Task..." 
+                         v-model.trim="taskValue" @keyup.enter="addTask()"
+                        >
+
+                        <!-- Bottone per inserire la Task scritta nella Text-Box --> 
+                        <button 
+                         class="todo-list-main__card--head__button" 
+                         @click="addTask()"
+                        >
+                            Aggiungi Task
+                        </button>
                     </div>
                     <!-- Card Body -->
                     <div class="todo-list-main__card--body">
                         <ul class="todo-list-main__card--body__list" >
                             <!-- ciclo per creare le task -->
                             <li 
-                            class="todo-list-main__card--body__list__item" 
-                            v-for="(object,i) in todoList"
+                             class="todo-list-main__card--body__list__item" 
+                             v-for="(object,i) in todoList"
                             >
                                 <!-- Task standard create, contiene un Event che permette di sbarrare il testo -->
-                                <span class="flex-grow" v-if="object.done === false"  
-                                @click="object.done === true ? object.done = false : object.done = true"
+                                <span 
+                                 class="flex-grow" 
+                                 v-if="object.done === false"  
+                                 @click="object.done === true ? object.done = false : object.done = true"
                                 >
                                     {{object.text}}
                                 </span>
                                 
                                 <!-- Task create sbarrate, contiene un Event che permette di rimuovere la barra dal testo -->
-                                <span class="flex-grow" v-else 
-                                :class="classLineThrough" 
-                                @click="object.done === true ? object.done = false : object.done = true"
+                                <span 
+                                 class="flex-grow" 
+                                 v-else 
+                                 :class="classLineThrough" 
+                                 @click="object.done === true ? object.done = false : object.done = true"
                                 >
                                     {{object.text}}
                                 </span>
 
                                 <!-- Elemento che serve a rimuovere una Task -->
-                                <span class="todo-list-main__card--body__list__item--delete"
-                                @click="removeTask(todoList, i, 1)"
+                                <span 
+                                 class="todo-list-main__card--body__list__item--delete"
+                                 @click="removeTask(todoList, i, 1)"
                                 >
                                     X
                                 </span>
