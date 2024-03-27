@@ -10,7 +10,7 @@ createApp({
             todoList:[
                 {
                     text: 'Svegliarsi',
-                    done: false,
+                    done: true,
                 },
                 {
                     text: 'Inspirare',
@@ -18,7 +18,7 @@ createApp({
                 },
                 {
                     text: 'Fare una giravolta',
-                    done: false,
+                    done: true,
                 },
                 {
                     text: 'Espirare',
@@ -29,13 +29,24 @@ createApp({
                     done: false,
                 },
             ],
+            CurrentObjectIndex: 0,
+            ClassLineThrough: 'decoration-line-through',
         }
     },
 
 
 
     methods:{
+        todoCheck(){
+            
 
+            for(let i = object; i < this.todoList.length; i++){
+                if(this.todoList[i].done === true){
+                    
+                }
+
+            }            
+        }
 
     }
 }).mount('#app')

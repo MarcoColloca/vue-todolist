@@ -27,9 +27,18 @@
             <div class="container">               
                 <div class="todo-list-main__card">
                     <div class="todo-list-main__card--body">
-                        <ul class="todo-list-main__card--body__list">
-                            <li class="todo-list-main__card--body__list__item" v-for="(object,i) in todoList">
-                                {{object.text}}
+                        <ul class="todo-list-main__card--body__list" >
+                            <li 
+                            class="todo-list-main__card--body__list__item" 
+                            v-for="(object,i) in todoList"
+                            >
+                                <span v-if="object.done === false">
+                                    {{object.text}}
+                                </span>
+                               
+                                <span v-else :class="ClassLineThrough">
+                                    {{object.text}}
+                                </span>
                             </li>
                         </ul>
                     </div>                    

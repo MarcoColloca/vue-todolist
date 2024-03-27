@@ -11,6 +11,13 @@ ul, li, menu{
 }
 
 
+/* Utility */
+
+.decoration-line-through{
+    text-decoration: line-through;
+}
+
+
 /* Page Style*/
 
 body{
