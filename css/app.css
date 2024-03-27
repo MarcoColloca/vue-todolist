@@ -29,6 +29,15 @@ body{
 }
 
 
+::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+
+input:focus-visible{
+    outline: none;
+}
+
 /* Page Containers*/
 
 .container{
@@ -53,15 +62,38 @@ body{
 
 /* Page Main*/
 
+
+/* Card */
 .todo-list-main__card{
-    padding: 100px 0;
+    margin: 100px 0;
+
 }
 
+
+/*Card Head*/
+
+.todo-list-main__card--head{
+    background-color: rgb(14, 14, 14);
+    padding: 12px 24px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.todo-list-main__card--head__text-box{
+    font-size: 20px;
+    width: 100%;
+    height: 32px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.37);
+    color: rgb(0, 0, 0);
+}
+
+/* Card Body*/
 .todo-list-main__card--body{
     background-color: white;
-    border-radius: 5px;
     padding: 0 30px;
-    margin: 0 -30px;
 }
 
 .todo-list-main__card--body__list{
@@ -90,4 +122,8 @@ body{
 
 .todo-list-main__card--body__list__item--delete{
     padding: 0 10px;
+}
+
+.todo-list-main__card--body__list__item--delete:hover{
+    color: crimson;
 }
