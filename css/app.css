@@ -149,6 +149,7 @@ input:focus-visible{
     cursor: pointer;
     display: flex;
     justify-content: space-between;
+    user-select: none;
 }
 
 .todo-list-main__card--body__list .todo-list-main__card--body__list__item:last-child{
