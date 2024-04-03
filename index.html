@@ -44,6 +44,14 @@
                         >
                             Aggiungi Task
                         </button>
+
+                        <!-- "Pulsante" che elimina tutte le Task -->
+                        <span
+                         class="todo-list-main__card--head__delete-all"
+                         @click="removeTask(i, todoList.length)"
+                        >
+                            X
+                        </span>
                     </div>
                     <!-- Card Body -->
                     <div class="todo-list-main__card--body">
