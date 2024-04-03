@@ -50,13 +50,16 @@ createApp({
         
         addTask(){
 
-            const newTask = {
-                text: this.taskValue,
-                done: false
-            }
+            if(this.taskValue !== ''){
 
-            this.todoList.push(newTask)
-            this.taskValue = ''
+                const newTask = {
+                    text: this.taskValue,
+                    done: false
+                }
+    
+                this.todoList.push(newTask)
+                this.taskValue = ''
+            }
         },
         
     }
